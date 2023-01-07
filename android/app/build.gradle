@@ -239,16 +239,24 @@ android {
             signingConfig signingConfigs.debug
         }
 
-        uat {
+        release {
+            minifyEnabled enableProguardInReleaseBuilds
+            proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+            resValue "string", "CodePushDeploymentKey", '"<INSERT_PRODUCTION_KEY>"'
+        }
+
+        releaseUat {
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
             resValue "string", "CodePushDeploymentKey", '"ucdBzN4LdgljAVqZOVSYMr0bEc-FVK-h4boSj"'
+            matchingFallbacks = ['release']
         }
 
-        dev {
+        releaseDev {
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
             resValue "string", "CodePushDeploymentKey", '"TaxhMdydEHM2TAdzXKqInT1SAZO6itxtWS5K3"'
+            matchingFallbacks = ['release']
         }
     }
 
