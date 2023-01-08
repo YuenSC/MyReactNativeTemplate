@@ -1,5 +1,5 @@
 {
-  "name": "testapp",
+  "name": "myreactnativetemplate",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -9,9 +9,9 @@
     "android:dev-release": "react-native run-android --variant=devrelease",
     "android:prod": "react-native run-android --variant=proddebug",
     "android:prod-release": "react-native run-android --variant=prodrelease",
-    "ios:prod": "react-native run-ios --scheme 'testappprod'",
-    "ios:staging": "react-native run-ios --scheme 'testappuat'",
-    "ios:dev": "react-native run-ios --scheme 'testappdev'",
+    "ios:prod": "react-native run-ios --scheme 'MyReactNativeTemplate'",
+    "ios:uat": "react-native run-ios --scheme 'MyReactNativeTemplateUat'",
+    "ios:dev": "react-native run-ios --scheme 'MyReactNativeTemplateDev'",
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"

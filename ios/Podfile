@@ -4,7 +4,7 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 platform :ios, '12.4'
 install! 'cocoapods', :deterministic_uuids => false
 
-target 'testapp' do
+target 'MyReactNativeTemplate' do
   config = use_native_modules!
 
   # Flags change depending on the env values.
@@ -23,12 +23,16 @@ target 'testapp' do
     # you should disable the next line.
     :flipper_configuration => FlipperConfiguration.enabled,
     # An absolute path to your application root.
-    :app_path => "#{Pod::Config.instance.installation_root}/.."
+    :app_path => "#{Pod::Config.instance.installation_root}/.." 
   )
 
-  target 'testappTests' do
+
+  target 'MyReactNativeTemplateDev' do
     inherit! :complete
-    # Pods for testing
+  end
+
+  target 'MyReactNativeTemplateUat' do
+    inherit! :complete
   end
 
   post_install do |installer|
