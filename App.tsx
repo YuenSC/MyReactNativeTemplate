@@ -27,6 +27,8 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+import Config from 'react-native-config';
+
 const Section: React.FC<
   PropsWithChildren<{
     title: string;
@@ -42,7 +44,7 @@ const Section: React.FC<
             color: isDarkMode ? Colors.white : Colors.black,
           },
         ]}>
-        {title}
+        {`${title}${Config.ENVIRONMENT}`}
       </Text>
       <Text
         style={[
