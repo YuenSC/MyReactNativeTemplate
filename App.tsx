@@ -26,7 +26,6 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-
 import Config from 'react-native-config';
 
 const Section: React.FC<
@@ -44,8 +43,9 @@ const Section: React.FC<
             color: isDarkMode ? Colors.white : Colors.black,
           },
         ]}>
-        {`${title}${Config.ENVIRONMENT}`}
+        {`${title} ${Config.ENVIRONMENT}`}
       </Text>
+      <Text>{JSON.stringify(Config)}</Text>
       <Text
         style={[
           styles.sectionDescription,

@@ -1,10 +1,17 @@
 {
-  "name": "react-native-boilerplate",
+  "name": "testapp",
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "android": "react-native run-android",
-    "ios": "react-native run-ios",
+    "android:uat": "react-native run-android --variant=uatdebug",
+    "android:uat-release": "react-native run-android --variant=uatrelease",
+    "android:dev": "react-native run-android --variant=devdebug",
+    "android:dev-release": "react-native run-android --variant=devrelease",
+    "android:prod": "react-native run-android --variant=proddebug",
+    "android:prod-release": "react-native run-android --variant=prodrelease",
+    "ios:prod": "react-native run-ios --scheme 'testappprod'",
+    "ios:staging": "react-native run-ios --scheme 'testappuat'",
+    "ios:dev": "react-native run-ios --scheme 'testappdev'",
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
